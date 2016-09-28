@@ -5,6 +5,8 @@
  */
 package jeu;
 
+import moteur.MoteurGraphique;
+
 /**
  *
  * @author Marine
@@ -16,6 +18,8 @@ public class Jeu {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        MoteurGraphique moteur = new MoteurGraphique(new moteur.Jeu(), new moteur.Dessin());
+        moteur.lancerJeu(500, 500, 30);
     }
     
 }

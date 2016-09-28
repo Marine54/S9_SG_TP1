@@ -13,16 +13,22 @@ import java.awt.image.BufferedImage;
  *
  * @author Marine
  */
-public class Dessin implements DessinAbstract{
+public class Dessin implements DessinAbstract {
 
     @Override
     public void dessiner(BufferedImage image) {
-    Graphics2D g=image.createGraphics();
-    g.setColor(Color.red);
-    g.drawRect(100,100,300,100);
-        int t=10;
-    g.drawOval(100-t,100-t, 2*t, 2*t);
-        }
-    
-    
+        Graphics2D g = image.createGraphics();
+        g.setColor(Color.red);
+        
+        // Ajout du rectangle
+        g.drawRect(100, 100, 300, 100);
+        
+        // Ajout des 4 cercles
+        int rayon = 10;
+        g.drawOval(100 - rayon, 100 - rayon, 2 * rayon, 2 * rayon);
+        g.drawOval(400 - rayon, 100 - rayon, 2 * rayon, 2 * rayon);
+        g.drawOval(100 - rayon, 200 - rayon, 2 * rayon, 2 * rayon);
+        g.drawOval(400 - rayon, 200 - rayon, 2 * rayon, 2 * rayon);
+    }
+
 }
